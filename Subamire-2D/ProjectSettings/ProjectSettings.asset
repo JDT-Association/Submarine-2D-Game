@@ -617,6 +617,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -630,10 +631,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: a8f643ee-8225-4220-adf1-f07d6e862e61
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Submarine-2D
+  organizationId: android-devs
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
