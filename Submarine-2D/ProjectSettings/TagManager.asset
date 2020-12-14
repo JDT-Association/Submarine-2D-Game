@@ -7,6 +7,7 @@ TagManager:
   - mainCharacter
   - moveRight
   - moveLeft
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Player
   - Background
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 227189071
+    locked: 0
+  - name: Enemy
+    uniqueID: 1355591733
     locked: 0
   - name: Player
     uniqueID: 4082014585
