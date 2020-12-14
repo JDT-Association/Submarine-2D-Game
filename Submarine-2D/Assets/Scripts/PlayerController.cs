@@ -58,16 +58,18 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
-}
+    }
 
-    private void OnCollisionEnter2D(Collision2D other){
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         print("Le pegastes wey");
-        if (other.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             //Destroy(other.gameObject);
             TakeDamage(10);
-            print("Vida: "+currentHealth);
+            print("Vida: " + currentHealth);
         }
     }
+
 }
 
