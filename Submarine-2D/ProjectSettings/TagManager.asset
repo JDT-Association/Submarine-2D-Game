@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - mainCharacter
+  - moveRight
+  - moveLeft
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - Background
+  - Enemy
   - 
   - 
   - 
@@ -40,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 227189071
+    locked: 0
+  - name: Enemy
+    uniqueID: 1355591733
+    locked: 0
+  - name: Player
+    uniqueID: 4082014585
     locked: 0
