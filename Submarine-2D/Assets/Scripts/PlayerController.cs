@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,8 +11,13 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public int speed = 5;
+    public int maxScore = 100;
+    public int currentScore;
+
+    public Text scoreText;
 
     public HealthBar healthBar;
+    //public Experience experience;
     public Joystick joystick;
 
     private void Start()
@@ -54,20 +61,33 @@ public class PlayerController : MonoBehaviour
         transform.Translate(new Vector3(joystick.Horizontal, joystick.Vertical, 0) * Time.deltaTime * 5);
     }
 
+    
     void TakeDamage(int damage)
     {
+        //disminuye la vida dependiendo del daño causado y se actualiza la barra de vida
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
     }
 
+    void AddScore(int score)
+    {
+        // aumenta el score dependiendo el numero que le pases
+        currentScore += score;
+    }
+
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("Le pegastes wey");
+        //cuando entra en colission con algun objeto que tenga de tag "Enemy"
         if (collision.gameObject.tag == "Enemy")
         {
-            //Destroy(other.gameObject);
+            // lo que se hace cuando entra en collision
             TakeDamage(10);
+            AddScore(5);
+            scoreText.text = currentScore.ToString();
             print("Vida: " + currentHealth);
+            print("Score: " + currentScore);
         }
     }
 
